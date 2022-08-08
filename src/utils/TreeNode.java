@@ -21,6 +21,7 @@ public class TreeNode {
         this.right = right;
     }
 
+    // 通过整形数组，使用层次遍历初始化树
     TreeNode(Integer[] input) {
         Queue<TreeNode> queue = new LinkedList<>();
         TreeNode root = new TreeNode();
@@ -38,7 +39,6 @@ public class TreeNode {
                     father.left = treeNode;
                 } else {
                     father.right = treeNode;
-                    int m = 2;
                 }
             }
             queue.offer(treeNode);
