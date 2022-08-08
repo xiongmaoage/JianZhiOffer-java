@@ -1,0 +1,36 @@
+/**
+ * Definition for a binary tree node.
+ * public class utils.TreeNode {
+ *     int val;
+ *     utils.TreeNode left;
+ *     utils.TreeNode right;
+ *     utils.TreeNode() {}
+ *     utils.TreeNode(int val) { this.val = val; }
+ *     utils.TreeNode(int val, utils.TreeNode left, utils.TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    private int depth = 0;
+    private int max = 0;
+    public int maxDepth(utils.TreeNode root) {
+        dfs(root);
+        return this.max;
+    }
+
+    void dfs(utils.TreeNode t) {
+        if (t == null) {
+            return;
+        }
+        this.depth++;
+        if (this.depth > this.max) {
+            this.max = this.depth;
+        }
+        dfs(t.left);
+        dfs(t.right);
+        this.depth--;
+    }
+}
