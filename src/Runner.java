@@ -1,13 +1,12 @@
-import jianzhiOffer.Offer37;
+import jianzhiOffer.Offer38;
 import utils.TreeNode;
 
 public class Runner {
     public static void main(String[] args) {
-        Offer37 offer = new Offer37();
-        TreeNode node = new TreeNode(new Integer[]{1, 2, 3, 4, null, null, null});
-        TreeNode node0 = null;
-        String data = offer.serialize(node);
-        System.out.println(data);
-        TreeNode root = offer.deserialize(data);
+        Offer38 offer = new Offer38();
+        String[] abcs = offer.permutation("abc");
+        for (String s : abcs) {
+            System.out.println(s);
+        }
     }
 }
