@@ -11,7 +11,7 @@ import java.util.Queue;
 
 // 注意arraylist和数组的转换
 // 注意null
-public class Offer32_1 {
+public class Offer32 {
     public int[] levelOrder(TreeNode root) {
         if (root == null) {
             return new int[0];
