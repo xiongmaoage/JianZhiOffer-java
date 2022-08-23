@@ -1,8 +1,8 @@
-import jianzhiOffer.Offer53;
+import jianzhiOffer.Offer58;
 
 public class Runner {
     public static void main(String[] args) {
-        Offer53 offer = new Offer53();
-        System.out.println(offer.search(new int[]{2}, 2));
+        Offer58 offer = new Offer58();
+        System.out.println(offer.reverseWords("  hello  world!  "));
     }
 }
