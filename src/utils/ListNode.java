@@ -4,13 +4,13 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    ListNode() {}
+    public ListNode() {}
 
     public ListNode(int val) { this.val = val; }
 
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
-    ListNode(int[] list) {
+    public ListNode(int[] list) {
         ListNode head = null;
         ListNode current = null;
         for (int i : list) {
@@ -24,5 +24,17 @@ public class ListNode {
         }
         this.val = head.val;
         this.next = head.next;
+    }
+
+    @Override
+    public String toString() {
+        String str = "ListNode: ";
+        ListNode node = this;
+        str += this.val;
+        while (node.next != null) {
+            node = node.next;
+            str += "-->" + node.val;
+        }
+        return str;
     }
 }
