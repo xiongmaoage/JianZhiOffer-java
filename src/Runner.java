@@ -1,11 +1,13 @@
-import codeTop.T033;
+import codeTop.T450;
 import jianzhiOffer.Offer66;
 import utils.ListNode;
+import utils.TreeNode;
 
 public class Runner {
     public static void main(String[] args) {
 //        Offer66 offer = new Offer66();
-        T033 t = new T033();
-        System.out.println(t.search(new int[]{5,1,2,3,4}, 1));
+        T450 t = new T450();
+        TreeNode node = new TreeNode(0);
+        System.out.println(t.deleteNode(node, 0));
     }
 }
